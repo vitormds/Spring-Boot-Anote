@@ -1,12 +1,12 @@
-package rc.noteit.api;
+package com.anote.api;
 
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-import rc.noteit.Mapper;
-import rc.noteit.api.viewmodel.NoteViewModel;
-import rc.noteit.db.NoteRepository;
-import rc.noteit.db.NotebookRepository;
-import rc.noteit.model.Note;
+import com.anote.Mapper;
+import com.anote.api.viewmodel.NoteViewModel;
+import com.anote.db.NoteRepository;
+import com.anote.db.NotebookRepository;
+import com.anote.model.Note;
 
 import javax.persistence.EntityNotFoundException;
 import javax.validation.ValidationException;

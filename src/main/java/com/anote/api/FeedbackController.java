@@ -1,16 +1,12 @@
-package rc.noteit.api;
+package com.anote.api;
 
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-import rc.noteit.api.viewmodel.FeedbackViewModel;
-import rc.noteit.mail.*;
+import com.anote.api.viewmodel.FeedbackViewModel;
+import com.anote.mail.*;
 
 import javax.validation.ValidationException;
 
-/*
-Requests can be tested using the built in HTTP Rest Client. Use the
-examples found in 'noteit.http' file.
- */
 
 @RestController
 @RequestMapping("/api/feedback")
