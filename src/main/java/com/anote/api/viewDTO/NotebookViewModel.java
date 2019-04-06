@@ -1,4 +1,4 @@
-package rc.noteit.api.viewmodel;
+package com.anote.api.viewDTO;
 
 import javax.validation.constraints.NotNull;
 
