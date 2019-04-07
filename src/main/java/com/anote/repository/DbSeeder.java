@@ -1,15 +1,14 @@
 package com.anote.repository;
 
-import org.springframework.boot.CommandLineRunner;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
-import org.springframework.stereotype.Component;
+
+
+import org.springframework.stereotype.Service;
 import com.anote.model.Note;
 import com.anote.model.Notebook;
 
 
-@Component
-@ConditionalOnProperty(name = "noteit.db.recreate", havingValue = "true")
-public class DbSeeder implements CommandLineRunner {
+@Service
+public class DbSeeder {
     private NotebookRepository notebookRepository;
     private NoteRepository noteRepository;
 
@@ -17,11 +16,9 @@ public class DbSeeder implements CommandLineRunner {
                     NoteRepository noteRepository) {
         this.notebookRepository = notebookRepository;
         this.noteRepository = noteRepository;
-    }
+  
 
 
-    @Override
-    public void run(String... args) {
         // Remove all existing entities
         this.notebookRepository.deleteAll();
         this.noteRepository.deleteAll();

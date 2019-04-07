@@ -3,13 +3,14 @@ package com.anote.api;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import com.anote.Mapper;
-import com.anote.api.viewmodel.NoteViewModel;
-import com.anote.db.NoteRepository;
-import com.anote.db.NotebookRepository;
+import com.anote.api.viewDTO.NoteViewModel;
+import com.anote.repository.NoteRepository;
+import com.anote.repository.NotebookRepository;
 import com.anote.model.Note;
 
 import javax.persistence.EntityNotFoundException;
 import javax.validation.ValidationException;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;

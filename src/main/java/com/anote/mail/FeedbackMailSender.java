@@ -1,4 +1,4 @@
-package com.anote.mail;
+/*package com.anote.mail;
 
 import org.springframework.core.env.Environment;
 import org.springframework.mail.SimpleMailMessage;
@@ -29,3 +29,4 @@ public class FeedbackMailSender implements FeedbackSender {
         this.mailSender.send(message);
     }
 }
+*/

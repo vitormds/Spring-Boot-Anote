@@ -1,10 +1,11 @@
 package com.anote.api;
 
+
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import com.anote.Mapper;
-import com.anote.api.viewmodel.NotebookViewModel;
-import com.anote.db.NotebookRepository;
+import com.anote.api.viewDTO.NotebookViewModel;
+import com.anote.repository.NotebookRepository;
 import com.anote.model.Notebook;
 
 import javax.validation.ValidationException;

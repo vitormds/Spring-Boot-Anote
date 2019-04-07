@@ -1,4 +1,4 @@
-package com.anote.api;
+package com.anote;
 
 import java.util.UUID;
 
@@ -42,7 +42,7 @@ public class Mapper {
     public Note convertToNoteEntity(NoteViewModel viewModel) {
         var notebook = this.notebookRepository.findById(UUID.fromString(viewModel.getNotebookId())).get();
         var entity = new Note(viewModel.getId(), viewModel.getTitle(), viewModel.getText(), notebook);
-
+        
         return entity;
     }
 
