@@ -2,6 +2,9 @@ package com.anote.repository;
 
 
 
+import java.text.ParseException;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.anote.model.Note;
 import com.anote.model.Notebook;
@@ -9,14 +12,12 @@ import com.anote.model.Notebook;
 
 @Service
 public class DbSeeder {
-    private NotebookRepository notebookRepository;
-    private NoteRepository noteRepository;
+    private @Autowired NotebookRepository notebookRepository;
+    private @Autowired NoteRepository noteRepository;
 
-    public DbSeeder(NotebookRepository notebookRepository,
-                    NoteRepository noteRepository) {
-        this.notebookRepository = notebookRepository;
-        this.noteRepository = noteRepository;
-  
+   
+    public void instatiateTestDatabase( ) throws ParseException {
+      
 
 
         // Remove all existing entities
@@ -28,17 +29,18 @@ public class DbSeeder {
         Notebook defaultNotebook = new Notebook("Default");
         this.notebookRepository.save(defaultNotebook);
 
-        Notebook quotesNotebook = new Notebook("Quotes");
-        this.notebookRepository.save(quotesNotebook);
 
         // Save the welcome note
-        Note note = new Note("Hello", "Welcome to Note It", defaultNotebook);
+        Note note = new Note("Hello", "Welcome to Anote", defaultNotebook);
         this.noteRepository.save(note);
 
-        // Save a quote note
-        Note quoteNote = new Note("Latin Quote", "Carpe Diem", quotesNotebook);
-        this.noteRepository.save(quoteNote);
+    
 
         System.out.println("Initialized database");
     }
+
+	
+		
+		
+	
 }

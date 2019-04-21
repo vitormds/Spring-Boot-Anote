@@ -1,4 +1,4 @@
-/*package com.anote.mail;
+package com.anote.mail;
 
 import org.springframework.core.env.Environment;
 import org.springframework.mail.SimpleMailMessage;
@@ -19,14 +19,14 @@ public class FeedbackMailSender implements FeedbackSender {
     }
 
     @Override
-    public void sendFeedback(String from, String name, String feedback){
+    public void sendFeedback(String name, String email, String feedback){
         SimpleMailMessage message = new SimpleMailMessage();
-        message.setTo("feedback@noteit.com");
-        message.setSubject("New feedback from " + name);
+        message.setTo(email);
+        message.setSubject("Novo comentário de" + name);
         message.setText(feedback);
-        message.setFrom(from);
+        message.setFrom("dev_vitorsouza@hotmail.com");
+        
 
         this.mailSender.send(message);
     }
 }
-*/
