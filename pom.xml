@@ -4,9 +4,9 @@
 	<modelVersion>4.0.0</modelVersion>
 	
 	 <groupId>com.anote</groupId>
-    <artifactId>Anote-api</artifactId>
+    <artifactId>Anote</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>war</packaging>
+    <packaging>jar</packaging>
 	
 	<name>Anote-api</name>
 	
